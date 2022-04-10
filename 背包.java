@@ -12,6 +12,7 @@ public class 背包 {
 		for (int len = tryCutLenList[tryCutIdx]; len <= totLen; len++) {
 			dpMostMoney[len] = Math.max(dpMostMoney[len],
 					dpMostMoney[len - tryCutLenList[tryCutIdx]] + value[tryCutIdx]);
+					// 去掉长度的钱多 还是保留的多
 		}
 	}
 
